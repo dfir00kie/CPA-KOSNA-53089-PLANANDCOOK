@@ -3,6 +3,7 @@
 require_once 'framework/Controller.php';
 require_once 'model/Recipe.php';
 
+
 /**
  * Contrôleur des actions liées au menu
  *
@@ -20,7 +21,7 @@ class ControllerHome extends Controller {
 
     // Affiche la liste de tous les recettes
     public function index() {
-        $recipes = $this->recipe->getRecipe();
+        $recipes = $this->recipe->getRecipes();
         $this->generateView(array('recipes' => $recipes));
     }
 

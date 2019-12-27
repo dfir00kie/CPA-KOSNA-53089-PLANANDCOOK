@@ -8,11 +8,12 @@ require_once 'framework/Model.php';
  */
 class Ingredient extends Model {
 
-    public function getIngredient() {
-        $sql = 'select ING_ID as id,'
-                . ' ING_NAME as name from T_INGREDIENT'
-                . ' order by ING_ID desc';
-        $ingredients= $this->executeRequest($sql)
+// Renvoie la liste des commentaires associés à une recette
+
+    public function getIngredients($idRecipe) {
+        $sql = 'select ING_ID as id, ING_NAME as name, . from T_INGREDIENT'
+                . ' where REC_ID=?';
+        $ingredients= $this->executeRequest($sql, array($idRecipe));
         return $ingredients;
     }
     

@@ -2,6 +2,7 @@
 
 require_once 'ControllerSecured.php';
 require_once 'model/Recipe.php';
+require_once 'model/Ingredient.php';
 
 /**
  * Contrôleur des actions d'administration
@@ -24,9 +25,9 @@ class ControllerAdmin extends ControllerSecured
     public function index()
     {
         $nbRecipes = $this->recipe->getNumberRecipes();
-        $nbIngredient = $this->ingredient->getNumberIngredient();
+        $nbIngredient = $this->ingredient->getNumberIngredients();
         $login = $this->request->getSession()->getAttribute("login");
-        parent::generateView(array('nbRecipes' => $nbRecipes, 'nbIngredient' => $nbIngredient, 'login' => $login));
+        parent::generateView(array('nbRecipes' => $nbRecipes, 'nbIngredients' => $nbIngredients, 'login' => $login));
     }
 }
 ?>

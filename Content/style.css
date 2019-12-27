@@ -6,13 +6,12 @@ html {
 }
 
 body {
-  height: 980px;
-  width: 100%;
   margin: 0;
   padding: 0;
   background-image: url("./images/lemons.jpg");
   font-family: "Courier New", Courier, monospace;
-  letter-spacing: 0.15em;  
+  letter-spacing: 0.15em;
+  text-align: center;  
 } 
 
 header h1 {
@@ -25,7 +24,7 @@ header h1 {
 
 /* Navigation */
 
-#navigation  ul {
+#main-menu  ul {
   width: 980px;
   padding: 10px;
   margin: 0px auto 0px auto;
@@ -49,9 +48,13 @@ li {
 }
 
 #content {
-  width: 920px;
-  min-height: 500px;
+  position: relative;
   padding: 0px;
+  text-align: center;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
 }
 
 /* Display */
@@ -103,9 +106,74 @@ a:hover, a.on {
   background-color: #ffffff;}
 
 #footer {
-  width: 100%;
+  width: 1000px;
+  bottom: 0;
+  position: absolute;
+  height: 2.5rem;  
   background: #ffffff;
   color: black;
   text-align: center;
-  padding: 6px;
+  padding: 0px;
+}
+
+/* Lists */
+
+table {
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+table.list {
+  width: 100%;
+}
+
+table.list tr td {
+  border: 1px solid black;
+}
+
+table.list tr th {
+  border: 1px solid rgb(0, 0, 0);
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #000;
+  color: black;
+  text-align: left;
+}
+
+/* Forms */
+
+dl {
+  clear: both;
+  overflow: hidden;
+  margin: 0.5em 0;
+}
+
+dt {
+  float: left;
+  font-weight: bold;
+  width: 125px;
+}
+
+dd {
+  float: left;
+  margin-left: 1em;
+}
+
+#operations {
+  clear: both;
+  margin: 1em 0 1em 75px;
+}
+
+/* Errors */
+
+.errors {
+  display: inline-block;
+  border: 2px solid red;
+  color: red;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.errors ul {
+  margin-bottom: 0;
+  padding-left: 1em;
 }

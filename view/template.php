@@ -2,31 +2,24 @@
 <html lang="en">
     <head>
     <meta charset="UTF-8" />
-        <base href="<?= $webRot ?>" >
+        <base href="<?php echo '/planandcook/'; ?>">
         <link rel="stylesheet" href="Content/style.css" />
         <title><?= $title ?></title>
     </head>
     <body>
         <div id="global">
-        <img src="Content/images/header.jpg" alt="Plan & Cook: your easy meal planner" />
-        <div id="navigation">
-            <ul>
-            <li><a href="view/viewHome.php">Home</a></li>
-            <li><a href="view/viewRecipes.php">Recipes</a></li>
-            <li><a href="view/viewMenu.php">Menu</a></li>
-            <li><a href="view/viewRegister.php">Register</a></li>
-            <li><a href="vieviewLogin.php">Login</a></li>
+        <div id="main-menu">
+        <ul>
+            <li><a href="<?php echo '/planandcook/'; ?>">Home</a></li>
+            <li><a href="<?php echo 'view/Recipes/index.php'; ?>">Recipes</a></li>
+            <li><a href="<?php echo 'view/Register/index.php'; ?>">Register</a></li>
+            <li><a href="<?php echo 'view/Connection/index.php'; ?>">Connect</a></li>
             </ul>
-        </div><!-- #navigation -->
+        </div><!-- #main-menu -->
         <div id="content">
-        <header>
-            <a href=""><h1>Menu for week <?php echo idate('W');?></h1></a>
-            <p>Welcome to your weekly meal planner</p>
-        </header>
-            <?= $content ?>
         </div> <!-- #content -->
         <footer id="footer">
-          <p>&copy; <?php echo date('Y');?> Plan & Cook</p>
+        <p>&copy; <?php echo date('Y');?> Plan & Cook</p>
         </footer>
         </div> <!-- #global -->
     </body>
