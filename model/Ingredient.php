@@ -6,9 +6,10 @@ require_once 'framework/Model.php';
  * Modélise ingredient
  *
  */
+
 class Ingredient extends Model {
 
-// Renvoie la liste des commentaires associés à une recette
+// Renvoie la liste des ingredients associés à une recette
 
     public function getIngredients($idRecipe) {
         $sql = 'select ING_ID as id, ING_NAME as name, . from T_INGREDIENT'
@@ -24,9 +25,9 @@ class Ingredient extends Model {
     }
     
     /**
-     * Renvoie le nombre total de commentaires
+     * Renvoie le nombre total des ingredients
      * 
-     * @return int Le nombre de commentaires
+     * @return int Le nombre des ingredients
      */
     public function getNumberIngredients()
     {

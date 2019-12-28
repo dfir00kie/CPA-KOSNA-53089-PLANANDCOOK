@@ -13,7 +13,6 @@ class Recipe extends Model {
      * @return PDOStatement La liste des recettes
      */
     public function getRecipes() {
-        $bdd= new PDO('mysql:host=localhost; dbname=planandcook; charset=utf8','root', '');
         $sql = 'select REC_ID as rec_id,'
                 . ' REC_NAME as rec_name,'
                 . ' REC_CONTENT as content from T_RECIPE'

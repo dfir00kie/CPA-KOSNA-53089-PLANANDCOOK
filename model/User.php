@@ -3,7 +3,7 @@
 require_once 'framework/Model.php';
 
 /**
- * Modélise dummy
+ * Modélise utilisateur
  *
  */
 class User extends Model {

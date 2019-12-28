@@ -15,6 +15,7 @@ class ControllerRecipe extends Controller {
     /**
      * Constructeur 
      */
+
     public function __construct() {
         $this->recipe = new Recipe();
         $this->ingredient = new Ingredient();
@@ -22,7 +23,7 @@ class ControllerRecipe extends Controller {
 
     // Affiche les détails d'une recette
     public function index() {
-        $idRecipe = $this->request->getParameter("id");
+        $idRecipe = $this->request->getParameter("rec_id");
         
         $recipe = $this->recipe->getRecipe($idRecipe);
         $ingredients = $this->ingredient->getIngredients($idRecipe);
@@ -32,10 +33,10 @@ class ControllerRecipe extends Controller {
 
     // Ajoute un ingredient dans une recette
     public function ingredient() {
-        $idRecipe = $this->request->getParameter("id");
-        $name = $this->request->getParameter("name");
+        $idRecipe = $this->request->getParameter("rec_id");
+        $name = $this->request->getParameter("rec_name");
         
-        $this->ingredient->addComment($name, $idRecipe);
+        $this->ingredient->addIngredient($name, $idRecipe);
         
         // Exécution de l'action par défaut pour réafficher la liste des recettes
         $this->executeAction("index");

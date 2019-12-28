@@ -1,20 +1,32 @@
-<?php $this->title = "Plan and Cook"; ?>
-<div id="global">
-<div id="content">
+<?php $title = 'Plan and Cook'; ?>
+<?php require('../../view/template.php'); ?>
+<div id=global>
+<a href=""><h1>Menu for week <?php echo idate('W');?></h1></a>
+<p>To view the menu you need to register.</p>
 
-
-<?php foreach ($recipes as $recipe): 
+<?php 
+  $recipes = [
+    ['rec_id' => '1', 'rec_name' => 'Chicken Pineapple Stir Fry'],
+	['rec_id' => '2', 'rec_name' => 'Homemade Burgers'],
+	['rec_id' => '3', 'rec_name' => 'Homemade Fish Sticks'],
+    ['rec_id' => '4', 'rec_name' => 'Ginger Citrus Salmon'],
+    ['rec_id' => '5', 'rec_name' => 'Vegetarian lasagne'],
+    ['rec_id' => '6', 'rec_name' => 'Zucchini soup'],
+];
     ?>
     
-    <article>
-        <header>
-            <a href=""><h1>Menu for week <?php echo idate('W');?></h1></a>
-            <p>Plan and Cook: comming soon</p>
-            <a href="<?= "Recipes/index/" . $this->clean($recipe['rec_id']) ?>">
-            <h1 class="recipeName"><?= $this->clean($recipe['rec_name']) ?></h1>
-            </a>
-        </header>
-        <p><?= $this->clean($recipe['rec_content']) ?></p>  
-    </article>
-    <hr />
-<?php endforeach; ?>
+<table class="list">
+  	  <tr>
+        <th>ID</th>
+        <th>Name</th>
+  	  </tr>
+	
+      <?php foreach($recipes as $recipe) { ?>
+        <tr>
+          <td><?php echo $recipe['rec_id']; ?></td>
+          <td><?php echo $recipe['rec_name']; ?></td>
+    	  </tr>
+      <?php } 
+      ?>
+  	</table>
+</div>

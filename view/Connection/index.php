@@ -1,10 +1,10 @@
-<?php $title = 'Connection' ?>
+<?php $title = 'Connect' ?>
 <?php require('../../view/template.php'); ?>
 
 <div id=global>
-<h2>Connection</h2>
+<h2>Connect</h2>
 <p>You need to be connected to access this zone.</p>
-<form action="view/Admin/index.php" method="post">
+<form action="connection/connect" method="post">
     <dl>
     <dt>Login</dt>
     <dd><input type="text" placeholder="Enter Login" name="login" value="" required autofocus /></dd>

@@ -8,9 +8,11 @@
     </head>
     <body>
         <div id="global">
+
         <div id="main-menu">
         <ul>
-            <li><a href="<?php echo '/planandcook/'; ?>">Home</a></li>
+            <li><img src="Content/images/header.jpg" alt="Plan and Cook"></li>
+            <li><a href="<?php echo 'view/Home/index.php'; ?>">Home</a></li>
             <li><a href="<?php echo 'view/Recipes/index.php'; ?>">Recipes</a></li>
             <li><a href="<?php echo 'view/Register/index.php'; ?>">Register</a></li>
             <li><a href="<?php echo 'view/Connection/index.php'; ?>">Connect</a></li>

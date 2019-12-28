@@ -3,7 +3,8 @@
 
 <div id=global>
 <h2>Register</h2>
-<form action="view/Admin/index.php" method="post">
+<p>Create an account to manage your own menus.</p>
+<form action="connection/connect" method="post">
     <dl>
     <dt>Login</dt>
     <dd><input type="text" placeholder="Enter Login" name="usr_login" value="" required /></dd>
