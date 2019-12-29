@@ -1,4 +1,4 @@
 <?php $title = 'Plan & Cook'; ?>
-<p>Une erreur est survenue : <?= $msgErreur ?></p>
+<p>The following error has occured : <?= $msgError ?></p>
 <p><?= $this->clean($msgError) ?></p>
 <?php require 'template.php'; ?> 

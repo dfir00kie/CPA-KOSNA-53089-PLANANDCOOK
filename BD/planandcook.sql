@@ -1,7 +1,7 @@
 /* Testé sous MySQL 5.x */
 
-CREATE DATABASE IF NOT EXISTS planandcook DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE planandcook;
+CREATE DATABASE IF NOT EXISTS `planandcook` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `planandcook`;
 
 drop table if exists T_INGREDIENT;
 drop table if exists T_RECIPE;
@@ -37,26 +37,33 @@ create table T_MENU (
   ) ENGINE=INNODB CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 insert into T_RECIPE(REC_NAME, REC_CONTENT) values
-(NOW(), 'Veggetarian Lasagne', 'Some content');
+(NOW(), 'Chicken Pineapple Stir Fry', 'Some content');
 insert into T_RECIPE(REC_NAME, REC_CONTENT) values
-(NOW(), 'Pineapple Chicken', 'Some content');
+(NOW(), 'Homemade Burgers', 'Some content');
 insert into T_RECIPE(REC_NAME, REC_CONTENT) values
-(NOW(), 'Oragne Salmon', 'Some content');
+(NOW(), 'Homemade Fish Sticks', 'Some content');
 
 insert into T_INGREDIENT(ING_NAME, REC_ID) values
-(NOW(), 'Chicken', '2');
+(NOW(), 'Chicken', 1);
 insert into T_INGREDIENT(ING_NAME, REC_ID) values
-(NOW(), 'Pineapple', '2';
+(NOW(), 'Pineapple', 1);
 insert into T_INGREDIENT(ING_NAME, REC_ID) values
-(NOW(), 'Soy sauce', '2';
+(NOW(), 'Soy sauce', 1);
 insert into T_INGREDIENT(ING_NAME, REC_ID) values
-(NOW(), 'Green oignion', '2';
+(NOW(), 'Green oignion', 1);
 insert into T_INGREDIENT(ING_NAME, REC_ID) values
-(NOW(), 'Leek', '1';
+(NOW(), 'Pineapple', 1);
 insert into T_INGREDIENT(ING_NAME, REC_ID) values
-(NOW(), 'Cream', '1';
+(NOW(), 'Beef', 2);
 insert into T_INGREDIENT(ING_NAME, REC_ID) values
-(NOW(), 'Zucchini', '1';
+(NOW(), 'Ruccola', 2);
+insert into T_INGREDIENT(ING_NAME, REC_ID) values
+(NOW(), 'Fish', 3);
 
 insert into T_USER(USR_LOGIN, USR_EMAIL, USR_PWD) values
 ('admin', '53089@etu.he2b.be', 'secret');
+
+insert into T_MENU(REC_ID) values
+(NOW(), 1);
+(NOW(), 2);
+(NOW(), 3);

@@ -19,6 +19,7 @@
             </ul>
         </div><!-- #main-menu -->
         <div id="content">
+        <?= $content ?>
         </div> <!-- #content -->
         <footer id="footer">
         <p>&copy; <?php echo date('Y');?> Plan & Cook</p>

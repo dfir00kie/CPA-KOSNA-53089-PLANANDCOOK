@@ -9,17 +9,17 @@
 <article>
     <header>
 
-            <a href="<?= "Recipes/index/" . $this->clean($recipe['rec_id']) ?>">
-            <h1 class="recipeName"><?= $this->clean($recipe['rec_name']) ?></h1>
+            <a href="<?= "Recipes/index/" . $this->clean($recipe['id']) ?>">
+            <h1 class="recipeName"><?= $this->clean($recipe['name']) ?></h1>
             </a>
         </header>
 </article>
 <hr />
-<p><?= $this->clean($recipe['rec_content']) ?></p>  
+<p><?= $this->clean($recipe['content']) ?></p>  
     </article>
     <hr />
 
-    <p><?= $this->clean($recipe['rec_name']) ?></p>
-    <p><?= $this->clean($recipe['rec_content']) ?></p>
-<?php endforeach; ?>
+    <p><?= $this->clean($recipe['name']) ?></p>
+    <p><?= $this->clean($recipe['content']) ?></p>
+    <?php endforeach; ?>
 <hr />

@@ -23,7 +23,7 @@ class ControllerRecipe extends Controller {
 
     // Affiche les détails d'une recette
     public function index() {
-        $idRecipe = $this->request->getParameter("rec_id");
+        $idRecipe = $this->request->getParameter("id");
         
         $recipe = $this->recipe->getRecipe($idRecipe);
         $ingredients = $this->ingredient->getIngredients($idRecipe);
@@ -33,7 +33,7 @@ class ControllerRecipe extends Controller {
 
     // Ajoute un ingredient dans une recette
     public function ingredient() {
-        $idRecipe = $this->request->getParameter("rec_id");
+        $idRecipe = $this->request->getParameter("id");
         $name = $this->request->getParameter("rec_name");
         
         $this->ingredient->addIngredient($name, $idRecipe);

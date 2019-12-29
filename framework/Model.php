@@ -44,7 +44,7 @@ abstract class Model
             // Récupération des paramètres de configuration BD
             $dsn = Configuration::get("dsn");
             $login = Configuration::get("login");
-            $pwd = Configuration::get("pwd");
+            $pwd = Configuration::get("mdp");
             // Création de la connexion
             self::$db = new PDO($dsn, $login, $pwd,
                     array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));

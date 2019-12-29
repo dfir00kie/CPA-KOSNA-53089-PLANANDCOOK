@@ -23,9 +23,9 @@ class ControllerConnection extends Controller
 
     public function connect()
     {
-        if ($this->request->existingParameter("login") && $this->request->existingParameter("pwd")) {
+        if ($this->request->existingParameter("login") && $this->request->existingParameter("mdp")) {
             $login = $this->request->getParameter("login");
-            $pwd = $this->request->getParameter("pwd");
+            $pwd = $this->request->getParameter("mdp");
             if ($this->user->connect($login, $pwd)) {
                 $user = $this->user->getUser($login, $pwd);
                 $this->request->getSession()->setAttribute("idUser",

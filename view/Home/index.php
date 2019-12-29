@@ -6,12 +6,12 @@
 
 <?php 
   $recipes = [
-    ['rec_id' => '1', 'rec_name' => 'Chicken Pineapple Stir Fry'],
-	['rec_id' => '2', 'rec_name' => 'Homemade Burgers'],
-	['rec_id' => '3', 'rec_name' => 'Homemade Fish Sticks'],
-    ['rec_id' => '4', 'rec_name' => 'Ginger Citrus Salmon'],
-    ['rec_id' => '5', 'rec_name' => 'Vegetarian lasagne'],
-    ['rec_id' => '6', 'rec_name' => 'Zucchini soup'],
+    ['id' => '1', 'name' => 'Chicken Pineapple Stir Fry'],
+	['id' => '2', 'name' => 'Homemade Burgers'],
+	['id' => '3', 'name' => 'Homemade Fish Sticks'],
+    ['id' => '4', 'name' => 'Ginger Citrus Salmon'],
+    ['id' => '5', 'name' => 'Vegetarian lasagne'],
+    ['id' => '6', 'name' => 'Zucchini soup'],
 ];
     ?>
     
@@ -23,8 +23,8 @@
 	
       <?php foreach($recipes as $recipe) { ?>
         <tr>
-          <td><?php echo $recipe['rec_id']; ?></td>
-          <td><?php echo $recipe['rec_name']; ?></td>
+          <td><?php echo $recipe['id']; ?></td>
+          <td><?php echo $recipe['name']; ?></td>
     	  </tr>
       <?php } 
       ?>
