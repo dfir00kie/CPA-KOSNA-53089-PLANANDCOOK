@@ -13,9 +13,9 @@ class Recipe extends Model {
      * @return PDOStatement La liste des recettes
      */
     public function getRecipes() {
-        $sql = 'select REC_ID as rec_id,'
-                . ' REC_NAME as rec_name,'
-                . ' REC_CONTENT as content from T_RECIPE'
+        $sql = 'select REC_ID as idRecipe,'
+                . ' REC_NAME as name,'
+                . ' REC_CONTENT as rec_content from T_RECIPE'
                 . ' order by REC_ID desc';
         $recipes= $this->executeRequest($sql);
         return $recipes;
@@ -28,7 +28,8 @@ class Recipe extends Model {
      * @throws Exception Si l'identifiant de la recette est inconnu
      */
     public function getRecipe($idRecipe) {
-        $sql = 'select REC_ID as id, select REC_CONTENT as content,'
+        $sql = 'select REC_ID as idRecipe, 
+                .   REC_CONTENT as rec_content,'
                 . ' REC_NAME as name from T_RECIPE'
                 . ' where REC_ID=?';
         $recipe = $this->executeRequest($sql, array($idRecipe));

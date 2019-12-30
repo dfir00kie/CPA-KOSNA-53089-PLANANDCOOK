@@ -7,7 +7,7 @@
 <div id=global>
 <h2>Show Recipe</h2>
 <a class="back-link" href="<?php echo 'view/Admin/index.php'; ?>">&laquo; Back to List</a>
-<div class="recipes show">
+<div class="recipe show">
  Page ID: <?php echo $id; ?>
 </div>
 </div>

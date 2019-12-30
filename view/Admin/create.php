@@ -17,8 +17,8 @@ if(is_post_request()) {
 
   // Handle form values sent by new.php
 
-  $name = $_POST['name'] ?? '';
-  $content = $_POST['content'] ?? '';
+  $name = $_POST['rec_name'] ?? '';
+  $content = $_POST['rec_content'] ?? '';
 
   echo "Form parameters<br />";
   echo "Recipe name: " . $name . "<br />";
