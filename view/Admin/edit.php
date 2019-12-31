@@ -32,7 +32,7 @@ function redirect_to($location) {
 } 
 
 if(!isset($_GET['id'])) {
-	redirect_to('/view/Recipes/index.php');
+	redirect_to('/view/Recipe/index.php');
 }
 
 $id = $_GET['id'];

@@ -14,9 +14,9 @@ class Recipe extends Model {
      */
     public function getRecipes() {
         $sql = 'select REC_ID as idRecipe,'
-                . ' REC_NAME as name,'
+                . ' REC_NAME as rec_name,'
                 . ' REC_CONTENT as rec_content from T_RECIPE'
-                . ' order by REC_ID desc';
+                . ' order by REC_ID asc';
         $recipes= $this->executeRequest($sql);
         return $recipes;
     }
@@ -30,7 +30,7 @@ class Recipe extends Model {
     public function getRecipe($idRecipe) {
         $sql = 'select REC_ID as idRecipe, 
                 .   REC_CONTENT as rec_content,'
-                . ' REC_NAME as name from T_RECIPE'
+                . ' REC_NAME as rec_name from T_RECIPE'
                 . ' where REC_ID=?';
         $recipe = $this->executeRequest($sql, array($idRecipe));
         if ($recipe->rowCount() > 0)

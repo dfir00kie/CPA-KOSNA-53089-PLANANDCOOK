@@ -8,6 +8,7 @@ require_once 'model/Recipe.php';
  * Contrôleur des actions liées au menu
  *
  */
+
 class ControllerHome extends Controller {
 
     private $recipe;
