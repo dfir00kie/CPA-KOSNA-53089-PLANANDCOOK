@@ -6,6 +6,7 @@ require_once 'framework/Model.php';
  * Modélise recipe
  *
  */
+
 class Recipe extends Model {
 
     /** Renvoie la liste des recettes
@@ -27,9 +28,9 @@ class Recipe extends Model {
      * @return array La recette
      * @throws Exception Si l'identifiant de la recette est inconnu
      */
+
     public function getRecipe($idRecipe) {
-        $sql = 'select REC_ID as idRecipe, 
-                .   REC_CONTENT as rec_content,'
+        $sql = 'select REC_ID as idRecipe, REC_CONTENT as rec_content,'
                 . ' REC_NAME as rec_name from T_RECIPE'
                 . ' where REC_ID=?';
         $recipe = $this->executeRequest($sql, array($idRecipe));

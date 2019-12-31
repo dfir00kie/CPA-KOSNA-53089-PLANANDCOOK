@@ -8,7 +8,7 @@ require_once 'model/Ingredient.php';
  * Contrôleur des actions liées aux recettes
  *
  */
-class ControllerRecipes extends Controller {
+class ControllerRecipe extends Controller {
 
     private $recipe;
     private $ingredient;
@@ -24,18 +24,18 @@ class ControllerRecipes extends Controller {
 
     // Affiche les détails d'une recette
     public function index() {
-        $idRecipe = $this->request->getParameter("id");
+        $idRecipe = $this->request->getParameter("idRecipe");
         
         $recipe = $this->recipe->getRecipe($idRecipe);
         $ingredients = $this->ingredient->getIngredients($idRecipe);
         
-        $this->generateView(array('recipe' => $recipe, 'ingredients' => $ingredients));
+        $this->generateView(array('Recipe' => $recipe, 'ingredients' => $ingredients));
     }
 
     // Ajoute un ingredient dans une recette
     public function ingredient() {
-        $idRecipe = $this->request->getParameter("id");
-        $name = $this->request->getParameter("name");
+        $idRecipe = $this->request->getParameter("idRecipe");
+        $name = $this->request->getParameter("ing_name");
         
         $this->ingredient->addIngredient($name, $idRecipe);
         

@@ -4,7 +4,8 @@
 <div id=global>
 <h2>Admin</h2>
 <p>You can manage the content here.</p>
-    <p>
+
+
     <div class="actions">
 		<li><a class="action" href="<?php echo 'view/Admin/new.php';?>">Add recipe</a></li>
         <li><a class="action" href="">Generate shopping list</a></li>

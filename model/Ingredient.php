@@ -12,7 +12,7 @@ class Ingredient extends Model {
 // Renvoie la liste des ingredients associés à une recette
 
     public function getIngredients($idRecipe) {
-        $sql = 'select ING_ID as id, ING_NAME as name, . from T_INGREDIENT'
+        $sql = 'select ING_ID as ing_id, ING_NAME as ing_name, . from T_INGREDIENT'
                 . ' where REC_ID=?';
         $ingredients= $this->executeRequest($sql, array($idRecipe));
         return $ingredients;

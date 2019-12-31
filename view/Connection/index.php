@@ -12,7 +12,7 @@
     <dl>
     <dt>Password</dt>
     <dd>
-    <dd><input type="password" placeholder="Enter Password" name="pwd" value="" required/></dd>
+    <dd><input type="password" placeholder="Enter Password" name="mdp" value="" required/></dd>
     </dd>
     </dl>
     <div id="operations">
@@ -23,4 +23,3 @@
 <?php if (isset($msgError)): ?>
     <p><?= $msgError ?></p>
 <?php endif; ?>
-

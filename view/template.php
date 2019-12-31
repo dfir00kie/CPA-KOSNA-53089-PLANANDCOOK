@@ -16,7 +16,7 @@
             <li><a href="<?php echo 'view/Recipe/index.php'; ?>">Recipes</a></li>
             <li><a href="<?php echo 'view/Register/index.php'; ?>">Register</a></li>
             <li><a href="<?php echo 'view/Admin/index.php'; ?>">Admin</a></li>
-            <li><a href="<?php echo 'view/Connection/index.php'; ?>">Connect</a></li>
+            <li><a href="<?php echo 'view/Connect/index.php'; ?>">Connect</a></li>
             </ul>
         </div><!-- #main-menu -->
         <div id="content">
