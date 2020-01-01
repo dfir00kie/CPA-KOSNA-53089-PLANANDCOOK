@@ -35,11 +35,11 @@ class ControllerConnection extends Controller
                 $this->redirect("admin");
             }
             else
-                $this->generateView(array('msgError' => 'Login ou mot de passe incorrects'),
+                $this->generateView(array('msgError' => 'Login or password are not correct'),
                         "index");
         }
         else
-            throw new Exception("Action impossible : login ou mot de passe non défini");
+            throw new Exception("Error : login or password have not been defined");
     }
 
     public function disconnect()
@@ -48,5 +48,12 @@ class ControllerConnection extends Controller
         $this->redirect("home");
     }
 
+    // Ajoute un utilisateur
+    public function register() {
+        $login = $this->request->getParameter("login");
+        $email = $this->request->getParameter("email");
+        $pwd = $this->request->getParameter("mdp");
+            
+        $this->register->addUser($login, $email, $mdp);      
+    }
 }
-?>

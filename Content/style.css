@@ -6,6 +6,8 @@ html {
 }
 
 body {
+  height: 980px;
+  width: 100%;
   margin: 0;
   padding: 0;
   background-image: url("./images/lemons.jpg");
@@ -48,14 +50,13 @@ li {
 }
 
 #content {
-  position: relative;
-  padding: 0px;
-  text-align: center;
+  
+  width: 920px;
+  min-height: 500px;
+  padding: 0 30px;
 }
 
-#content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-}
+
 
 /* Display */
 
@@ -106,13 +107,11 @@ a:hover, a.on {
   background-color: #ffffff;}
 
 #footer {
-  width: 1000px;
-  bottom: 0;
-  position: absolute;
-  height: 2.5rem;  
+  width: 940px;
+  height: 20px;
+  bottom: 0; 
   background: #ffffff;
   color: black;
-  text-align: center;
   padding: 0px;
 }
 

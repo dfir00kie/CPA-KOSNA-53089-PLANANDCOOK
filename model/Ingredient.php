@@ -2,27 +2,27 @@
 
 require_once 'framework/Model.php';
 
-/**
- * Modélise ingredient
- *
- */
 
+/**
+ * Fournit les services d'accès aux ingredients 
+ * 
+ */
 class Ingredient extends Model {
 
-// Renvoie la liste des ingredients associés à une recette
-
-    public function getIngredients($idRecipe) {
-        $sql = 'select ING_ID as ing_id, ING_NAME as ing_name, . from T_INGREDIENT'
-                . ' where REC_ID=?';
-        $ingredients= $this->executeRequest($sql, array($idRecipe));
-        return $ingredients;
-    }
+    // Renvoie la liste des ingredients associés à une recette
     
-    public function addIngredient($name, $idRecipe) {
-        $sql = 'insert into T_INGREDIENT(ING_NAME, REC_ID)'
-            . ' values(?, ?)';
-        $this->executeRequest($sql, array($name, $idRecipe));
-    }
+        public function getIngredients($idRecipe) {
+            $sql = 'select ING_ID as id, ING_NAME as name from T_INGREDIENT'
+                    . ' where REC_ID=?';
+            $ingredients = $this->executeRequest($sql, array($idRecipe));
+            return $ingredients;
+        }
+    
+        public function addIngredient($name, $idRecipe) {
+            $sql = 'insert into T_INGREDIENT(ING_NAME, REC_ID)'
+                . ' values(?, ?)';
+            $this->executeRequest($sql, array($name, $idRecipe));
+        }
     
     /**
      * Renvoie le nombre total des ingredients
@@ -38,3 +38,4 @@ class Ingredient extends Model {
     }
 
 }
+

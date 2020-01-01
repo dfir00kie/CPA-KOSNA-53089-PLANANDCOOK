@@ -25,9 +25,10 @@ class ControllerAdmin extends ControllerSecured
     public function index()
     {
         $nbRecipes = $this->recipe->getNumberRecipes();
-        $nbIngredient = $this->ingredient->getNumberIngredients();
+        $nbIngredients = $this->ingredient->getNumberIngredients();
         $login = $this->request->getSession()->getAttribute("login");
-        parent::generateView(array('nbRecipes' => $nbRecipes, 'nbIngredients' => $nbIngredients, 'login' => $login));
+        $recipes = $this->recipe->getRecipes();
+        parent::generateView(array('nbRecipes' => $nbRecipes, 'nbIngredients' => $nbIngredients, 'login' => $login, 'recipes' => $recipes));
     }
 }
 ?>

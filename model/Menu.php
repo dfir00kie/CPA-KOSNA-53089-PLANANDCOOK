@@ -3,31 +3,30 @@
 require_once 'framework/Model.php';
 
 /**
- * Modélise menu
- *
+ * Fournit les services d'accès aux menus
+ * 
  */
-
 class Menu extends Model {
 
-// Renvoie la liste des ingredients associés à une recette
-
-    public function getMenus($idMenu) {
-        $sql = 'select MEN_ID as id, REC_NAME as name, . from T_MENU'
-                . ' where REC_ID=?';
-        $menus= $this->executeRequest($sql, array($idMenu));
-        return $menus;
-    }
+    // Renvoie la liste des recipes associés à un menu
     
-    public function addMenu($name, $idMenu) {
-        $sql = 'insert into T_MENU(REC_ID, REC_NAME)'
-            . ' values(?, ?)';
-        $this->executeRequest($sql, array($name, $idMenu));
-    }
+        public function getRecipes($idMenu) {
+            $sql = 'select MEN_ID as id from T_MENU'
+                    . ' where REC_ID=?';
+            $recipes = $this->executeRequest($sql, array($idMenu));
+            return $recipes;
+        }
+    
+        public function addRecipe($name, $idMenu) {
+            $sql = 'insert into T_MENU(REC_ID)'
+                . ' values(?)';
+            $this->executeRequest($sql, array($idRecipe));
+        }
     
     /**
-     * Renvoie le nombre total des ingredients
+     * Renvoie le nombre total des recipes dans le menu
      * 
-     * @return int Le nombre des ingredients
+     * @return int Le nombre des recipes
      */
     public function getNumberMenus()
     {
