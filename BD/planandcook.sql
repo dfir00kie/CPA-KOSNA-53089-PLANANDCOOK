@@ -19,14 +19,13 @@ create table T_RECIPE (
   REC_ID integer primary key auto_increment,
   REC_NAME varchar(100) not null,
   REC_CONTENT varchar(500) not null,
-  ING_ID integer not null,
+  ING_ID integer not null
   ) ENGINE=InnoDB;
 
 create table T_USER (
   USR_ID integer primary key auto_increment,
   USR_LOGIN varchar(100) not null,
-  USR_EMAIL varchar(100) not null,
-  USR_PWD varchar(100) not null,
+  USR_PWD varchar(100) not null
   ) ENGINE=InnoDB;
 
 create table T_MENU (
@@ -87,10 +86,14 @@ insert into T_INGREDIENT(ING_NAME, REC_ID) values
 insert into T_INGREDIENT(ING_NAME, REC_ID) values 
 ('Garlic', 3);
 
-insert into T_USER(USR_LOGIN, USR_EMAIL, USR_PWD) values
-('admin', '53089@etu.he2b.be', 'secret');
-insert into T_USER(USR_LOGIN, USR_EMAIL, USR_PWD) values
-('webuser', 'akosna@hotmail.com', 'password');
+insert into T_USER(USR_LOGIN, USR_PWD) values
+('admin', 'secret');
+insert into T_USER(USR_LOGIN, USR_PWD) values
+('webuser', 'password');
+insert into T_USER(USR_LOGIN, USR_PWD) values
+('newuser', '123456');
+insert into T_USER(USR_LOGIN, USR_PWD) values
+('agnieszka', 'test');
 
 insert into T_MENU(REC_ID) values 
 (1);

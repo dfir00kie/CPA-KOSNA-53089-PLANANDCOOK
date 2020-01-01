@@ -1,7 +1,7 @@
 <?php $this->title = "Plan & Cook - " . $this->clean($recipe['name']); ?>
 
 
-
+<a class="back-link" href="/planandcook/admin/">&laquo; Back to List</a>
 <article>
     <header>
         <h1 class="recipeName"><?= $this->clean($recipe['name']) ?></h1>
@@ -25,12 +25,14 @@
 </article>
 
 <hr>
+<h2>Add ingredient</h2>
+<p>You can add the ingredient here.</p>
 <p>
 <form method="post" action="recipe/ingredient">
     <input id="id" name="name" type="text" placeholder="Ingredient name" 
            required /><br />
     <input type="hidden" name="id" value="<?= $recipe['id'] ?>" />
-    <input type="submit" value="Add Ingredient" />
+    <br><input type="submit" value="Add Ingredient" /></br>
 </form>
 </p>
 </hr>

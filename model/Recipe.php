@@ -36,6 +36,13 @@ class Recipe extends Model {
         else
             throw new Exception("There is no recipe with such an id '$idRecipe'");
     }
+
+    public function addRecipe($name, $content) {
+        $sql = 'insert into T_RECIPE(REC_NAME, REC_CONTENT)'
+            . ' values(?, ?)';
+        $this->executeRequest($sql, array($name, $content));
+    }
+
     /**
      * Renvoie le nombre total de recettes
      * 

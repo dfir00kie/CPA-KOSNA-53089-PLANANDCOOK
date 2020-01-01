@@ -13,7 +13,7 @@
         <ul>
             <li><img src="Content/images/header.jpg" alt="Plan and Cook"></li>
             <li><a href="<?php echo '/planandcook/'; ?>">Home</a></li>
-            <li><a href="<?php echo '/planandcook/connection/'; ?>">Connect</a></li>
+            <li><a href="<?php echo '/planandcook/connection/'; ?>">Login</a></li>
             </ul>
         </div><!-- #main-menu -->
         <div id="content">

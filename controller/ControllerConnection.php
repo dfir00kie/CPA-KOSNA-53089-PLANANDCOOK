@@ -48,12 +48,15 @@ class ControllerConnection extends Controller
         $this->redirect("home");
     }
 
-    // Ajoute un utilisateur
+    // Crée un nouveau utilisateur dans la BD
+
     public function register() {
         $login = $this->request->getParameter("login");
-        $email = $this->request->getParameter("email");
         $pwd = $this->request->getParameter("mdp");
-            
-        $this->register->addUser($login, $email, $mdp);      
+        
+        $user = $this->user->addUser($login, $pwd);
+          
+        $this->generateView(array('msgError' => 'The user has been created. You can now connect to the site.'),
+                        "index");         
     }
 }

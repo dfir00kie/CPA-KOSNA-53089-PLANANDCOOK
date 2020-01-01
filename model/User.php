@@ -45,19 +45,15 @@ class User extends Model {
      * Crée un nouveau utilisateur dans la BD
      * 
      * @param string $login Le login
-     * @param string $email Le email
      * @param string $pwd Le mot de passe
      * @return mixed L'utilisateur
-     * @throws Exception Si aucun utilisateur ne correspond aux paramètres
      */
-    public function addUser($login, $email, $pwd)
+    public function addUser($login, $pwd)
     {
-        $sql = 'insert into T_USER(USER_LOGIN, USR_EMAIL, USR_PWD)'
-            . ' values(?, ?, ?)';
-        $user = $this->executeRequest($sql, array($login, $email, $pwd));
-        if ($user->rowCount() == 1)
-            return $user->fetch();  // Accès à la première ligne de résultat
-        else
-            throw new Exception("This user already exists.");
+        $sql = 'insert into T_USER(USR_LOGIN, USR_PWD)'
+            . ' values(?, ?)';
+        $this->executeRequest($sql, array($login, $pwd));
+
     }
+
 }
