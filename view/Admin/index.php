@@ -11,7 +11,7 @@
 <h2>Add Recipe</h2>
 <p>You can add the recipe here.</p>
 
-<form method="post" action="recipe/recipe">
+<form method="post" action="recipe/recipe" >
     <input id="id" name="name" type="text" placeholder="Recipe name" 
            required /><br />
     <br>

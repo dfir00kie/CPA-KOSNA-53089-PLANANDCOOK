@@ -41,13 +41,16 @@ class ControllerRecipe extends Controller {
         // Exécution de l'action par défaut pour réafficher la liste des recipes
         $this->executeAction("index");
     }
-
+ 
      // Ajoute une recette
      public function recipe() {
         $name = $this->request->getParameter("name");
         $content = $this->request->getParameter("content");
         
         $this->recipe->addRecipe($name, $content);
-        
+
+         // Exécution de l'action par défaut pour réafficher la liste des recipes
+         $this->redirect("admin");
+    
     }
 }
